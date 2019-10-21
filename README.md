@@ -4,11 +4,6 @@ A simple way to stub default-only dependencies. This project currently only work
 
 ## Usage
 
-Process:
-
-1. Import the dependencies you wish to stub using `import * as ___ from '___';` syntax
-2. In your test, 
-
 ### 1. Import `dce-stub`
 
 ```js
@@ -33,14 +28,14 @@ Call `runStubbed` with two arguments:
 describe('My Feature', () => {
     it('Does Something', async () => {
         ...
-        
+
         // Define stub replacement
         const replacement = {
             dep: myDependency,
             stub: <stub of myDependency>,
         };
-        
-        // Run the 
+
+        // Run the
         await runStubbed(replacement, async () => {
             ...
         });
@@ -64,8 +59,8 @@ const replacements = [
     },
     ...
 ];
-    
-// Run the 
+
+// Run the
 await runStubbed(replacements, async () => {
     ...
 });
@@ -99,7 +94,7 @@ import getNameFromServer from './getNameFromServer';
 export default async () => {
     // Get the current user's name
     const name = await getNameFromServer();
-    
+
     // Create the message
     return `Hi ${name}! It is a pleasure to meet you.`;
 };
@@ -129,12 +124,12 @@ describe('genIntro', () => {
             dep: getNameFromServer,
             stub: getNameFromServerStub,
         };
-        
+
         // Run tests with stub replacements
         runStubbed(replacement, async () => {
             // Generate an intro message
             const intro = await genIntro();
-            
+
             // Test the intro
             assert.equal(
                 intro,
