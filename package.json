@@ -1,0 +1,29 @@
+{
+  "name": "dce-stub",
+  "version": "1.0.0",
+  "description": "A simplified way to stub dependencies using rewiremock.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harvard-edtech/dce-stub.git"
+  },
+  "keywords": [
+    "DCE",
+    "Test",
+    "Testing",
+    "Stub",
+    "Reqiremock"
+  ],
+  "author": "Gabe Abrams <gabeabrams@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harvard-edtech/dce-stub/issues"
+  },
+  "homepage": "https://github.com/harvard-edtech/dce-stub#readme",
+  "dependencies": {
+    "rewiremock": "^3.13.9"
+  }
+}
