@@ -1,9 +1,9 @@
-import rewiremock from 'rewiremock';
+const rewiremock = require('rewiremock');
 
 // Configuration:
 rewiremock.overrideEntryPoint(module);
 
-export default (...args) => {
-  const result = rewiremock.proxy(...args);
+module.exports = (filename, substitutions) => {
+  const result = rewiremock.proxy(filename, substitutions);
   return result.default;
 };
