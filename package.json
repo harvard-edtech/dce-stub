@@ -1,6 +1,6 @@
 {
   "name": "dce-stub",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simplified way to stub dependencies using rewiremock.",
   "main": "index.js",
   "scripts": {
