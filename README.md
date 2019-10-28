@@ -94,14 +94,14 @@ Wrong way:
 
 > ```js
 > import * as lms from 'my-lms';
-> 
+>
 > const api = lms.default.getAPI();
-> 
+>
 > class Course {
 >   constructor(id) {
 >     this.id = id;
 >   }
-> 
+>
 >   listStudents() {
 >     return api.course.listStudents(this,id);
 >   }
@@ -114,14 +114,14 @@ Right way:
 
 > ```js
 > import * as lms from 'my-lms';
-> 
+>
 > class Course {
 >   constructor(id) {
 >     this.id = id;
-> 
+>
 >     this.api = lms.getAPI();
 >   }
-> 
+>
 >   listStudents() {
 >     return this.api.course.listStudents(this,id);
 >   }
@@ -135,12 +135,12 @@ _(if there is no cost to re-initializing over and over)_
 
 > ```js
 > import * as lms from 'my-lms';
-> 
+>
 > class Course {
 >   constructor(id) {
 >     this.id = id;
 >   }
-> 
+>
 >   listStudents() {
 >     const api = lms.getAPI();
 >     return this.api.course.listStudents(this,id);
@@ -212,7 +212,7 @@ describe('genIntro', () => {
         };
 
         // Run tests with stub replacements
-        runStubbed(replacement, async () => {
+        await runStubbed(replacement, async () => {
             // Generate an intro message
             const intro = await genIntro();
 
