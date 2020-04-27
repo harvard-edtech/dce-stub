@@ -175,11 +175,11 @@ export default async () => {
 ### `genIntro.js`
 
 ```js
-import getNameFromServer from './getNameFromServer';
+import * as getNameFromServer from './getNameFromServer';
 
 export default async () => {
     // Get the current user's name
-    const name = await getNameFromServer();
+    const name = await getNameFromServer.default();
 
     // Create the message
     return `Hi ${name}! It is a pleasure to meet you.`;
